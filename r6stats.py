@@ -9,11 +9,11 @@ from selenium.common.exceptions import StaleElementReferenceException
 # rest of the imports are selenium additions I found while struggling with my list of long stack errors and searching up fixes for particular situations like mine
 # i will add comments on parts i think are worth explaning
 def scrape_r6_tracker():
-    USERNAME = "spacelordvoid"
-    PLATFORM = "ubi"
-    url = f"https://r6.tracker.network/r6siege/profile/{PLATFORM}/{USERNAME}/overview"
+    USERNAME = "spacelordvoid" # user i tracked 
+    PLATFORM = "ubi" # ubisoft/xbox/ps
+    url = f"https://r6.tracker.network/r6siege/profile/{PLATFORM}/{USERNAME}/overview" # site url for the given username
 
-    chrome_driver_path = r"C:\Users\Kaan Keskindil\OneDrive\Masaüstü\1020 Project Files\r6system\drivers\chromedriver-win64\chromedriver.exe"
+    chrome_driver_path = # Driver Path
 
     service = Service(chrome_driver_path) 
     options = webdriver.ChromeOptions()
@@ -91,3 +91,4 @@ def get_stats(output_format='dict', return_format=None): # dict for website stri
         if format_type == 'string':
             return "Rank: Error\nKD: 0.00"
         return {'rank': 'Error', 'kd': 0.0, 'kd_ratio': 0.0}
+

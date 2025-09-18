@@ -15,8 +15,8 @@ sys.path.append(str(project_root))
 intents = discord.Intents.default() # basically just permission for send messages
 intents.messages = True
 client = discord.Client(intents=intents)
-USER_ID = 807812546181464075
-BOT_TOKEN = 'MTM1NDYwMzg0OTMxODQwMDI0Mw.GG05Vs.eGXtyZ3hha4jktjzd06fKY7asV9nCudTAQ_Aa4'
+USER_ID = # Enter User ID
+BOT_TOKEN = # Enter Token
 prev_rank = None
 
 
@@ -110,4 +110,5 @@ def start_bot():
     client.run(BOT_TOKEN) # runs the bot
 
 if __name__ == '__main__': #it blocks bot from running automatically elsewhere - but i can run it here for tests
+
     start_bot()

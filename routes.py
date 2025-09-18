@@ -78,7 +78,7 @@ from core.r6stats import get_stats
 @bp.route('/')
 def index():
     try:
-        live_stats = get_stats()  # Changed from get_live_stats() to get_stats()
+        live_stats = get_stats()  
         
         stats = {
             "rank": live_stats.get('rank', 'Unranked'),
@@ -114,7 +114,7 @@ def index():
         except:
             return f"Error: Stats temporarily unavailable. {str(e)}", 500
 
-from flask import jsonify  # Make sure to import jsonify
+from flask import jsonify  
 import os
 
 @bp.route('/match_history')
@@ -145,4 +145,5 @@ def match_history():
             
     except (json.JSONDecodeError, IOError) as e:
         logger.error(f"Match history load error: {str(e)}")
+
         return render_template('match_history.html', error="Failed to load match history")

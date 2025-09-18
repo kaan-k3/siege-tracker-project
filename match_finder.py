@@ -8,15 +8,15 @@ from selenium.webdriver.support import expected_conditions as EC
 # similar to r6stats
 
 def get_match_data():
-    chrome_driver_path = "C:\\Users\\Kaan Keskindil\\OneDrive\\Masaüstü\\1020 Project Files\\r6system\\drivers\\chromedriver-win64\\chromedriver.exe"
+    chrome_driver_path = # insert driver path
     service = Service(chrome_driver_path)
     driver = webdriver.Chrome(service=service)
 
-    url = "https://r6.tracker.network/r6siege/profile/ubi/spacelordvoid/matches?playlist=ranked"
+    url = "https://r6.tracker.network/r6siege/profile/ubi/spacelordvoid/matches?playlist=ranked" # website I used to get stats data
     driver.get(url)
 
     wait = WebDriverWait(driver, 10)
-
+# Below is the code for scraping the site for the necessary information
     # map name/time appears next to each other on site
     details = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "span.text-secondary.text-14.font-medium"))) # css selectors 
     map_info = details.text.strip().split("•")
@@ -56,3 +56,4 @@ print(f"Timestamp: {match_data['timestamp']}")
 print(f"Score: {match_data['score']}")
 print(f"KD: {match_data['kd']}")
 print(f"HS %: {match_data['hs']}")
+

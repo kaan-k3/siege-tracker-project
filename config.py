@@ -8,9 +8,10 @@ class Config:
     TRACKER_NETWORK_URL = "https://r6.tracker.network/profile/"
     
     # Discord
-    DISCORD_BOT_TOKEN = 'MTM1NDYwMzg0OTMxODQwMDI0Mw.GG05Vs.eGXtyZ3hha4jktjzd06fKY7asV9nCudTAQ_Aa4'
-    DISCORD_USER_ID = 807812546181464075  
+    DISCORD_BOT_TOKEN = # Enter Token
+    DISCORD_USER_ID = # Enter User ID  
     
     # Arduino
     ARDUINO_PORT = 'COM3'  
+
     ARDUINO_BAUDRATE = 9600

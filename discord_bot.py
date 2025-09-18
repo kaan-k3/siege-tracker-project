@@ -22,8 +22,8 @@ intents = discord.Intents.default()
 intents.messages = True  # Ensure the bot can receive/send messages, the setup manual had it like this so I did the same.
 
 client = discord.Client(intents=intents)
-USER_ID = 807812546181464075  # info for discord bot
-BOT_TOKEN = 'MTM1NDYwMzg0OTMxODQwMDI0Mw.GG05Vs.eGXtyZ3hha4jktjzd06fKY7asV9nCudTAQ_Aa4'
+USER_ID =  # enter user id
+BOT_TOKEN = # enter bot token
 
 def generate_match_signature(match_data):
     """
@@ -152,5 +152,6 @@ def start_discord():  # this is just so i can import this entire file as a modul
     print("Created empty match history file")
     
     client.run(BOT_TOKEN)
+
 
 client.run(BOT_TOKEN)
